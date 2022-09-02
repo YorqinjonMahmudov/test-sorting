@@ -10,7 +10,7 @@ public class NullCarelessSortingTestExtension extends SortingTest{
         sorting = new NullCarelessSortingImpl();
     }
 
-    @Test(expected = UnexpectedException.class)
+    @Test(expected = AssertionError.class)
     @Override
     public void testNullCase() {
         sorting.sort(null);

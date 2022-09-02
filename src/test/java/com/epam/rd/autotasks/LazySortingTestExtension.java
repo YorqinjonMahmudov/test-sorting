@@ -17,4 +17,11 @@ public class LazySortingTestExtension extends SortingTest{
         sorting.sort(array);
         Assert.assertArrayEquals(sortedArray, array);
     }
+
+    @Test(expected = AssertionError.class)
+    @Override
+    public void testNullCase() {
+        sorting.sort(null);
+
+    }
 }

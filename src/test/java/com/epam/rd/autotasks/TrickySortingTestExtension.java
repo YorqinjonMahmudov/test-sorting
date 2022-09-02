@@ -1,6 +1,7 @@
 package com.epam.rd.autotasks;
 
 import org.junit.Assert;
+import org.junit.ComparisonFailure;
 import org.junit.Test;
 
 public class TrickySortingTestExtension extends SortingTest{
@@ -33,6 +34,7 @@ public class TrickySortingTestExtension extends SortingTest{
         sorting.sort(array);
         Assert.assertArrayEquals(sortedArray, array);
     }
+
 
     @Test
     @Override
