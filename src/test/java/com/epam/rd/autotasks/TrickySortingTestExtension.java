@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class TrickySortingTestExtension extends SortingTest{
     public TrickySortingTestExtension() {
         sorting = new TrickySortingImpl();
@@ -13,9 +15,11 @@ public class TrickySortingTestExtension extends SortingTest{
     @Override
     public void testOtherCases() {
         int[] array = {1, 7, 5, 9, 2, 8, 3, 6, 4};
-        int[] sortedArray = {1,1,5, 3, 4, 5, 6, 7, 8,9};
+        int[] sortedArray = {1,5, 3, 4, 5, 6, 7, 8,9};
         sorting.sort(array);
+
         Assert.assertArrayEquals(sortedArray, array);
+
     }
 
     @Test
@@ -32,6 +36,9 @@ public class TrickySortingTestExtension extends SortingTest{
         int[] array = {2};
         int[] sortedArray = {1};
         sorting.sort(array);
+
+        if (!Arrays.equals(array, sortedArray))
+            throw new AssertionError();
         Assert.assertArrayEquals(sortedArray, array);
     }
 
@@ -40,6 +47,11 @@ public class TrickySortingTestExtension extends SortingTest{
     @Override
     public void testSortedArraysCase() {
         int[] sortedArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        Assert.assertArrayEquals(new int[]{1,4,3,4,5,6,7,8,9,2},sortedArray);
+        int[] ints = {1, 4, 3, 4, 5, 6, 7, 8, 9};
+        sorting.sort(ints);
+        if (!Arrays.equals(ints, sortedArray))
+            throw new AssertionError();
+
+        Assert.assertArrayEquals(ints,sortedArray);
     }
 }

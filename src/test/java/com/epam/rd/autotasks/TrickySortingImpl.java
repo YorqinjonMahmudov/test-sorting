@@ -1,12 +1,14 @@
 package com.epam.rd.autotasks;
 
+import org.junit.Assert;
+
 import java.util.Arrays;
 
 public class TrickySortingImpl extends Sorting{
     @Override
     public void sort( int[] array) {
-        if (array== null)
-            throw new IllegalArgumentException();
+        Assert.assertNotNull(array);
+
         Arrays.sort(array);
     }
 }
