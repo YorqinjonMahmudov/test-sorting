@@ -13,15 +13,19 @@ public class LazySortingTestExtension extends SortingTest{
     @Override
     public void testOtherCases() {
         int[] array = {1, 7, 5, 9, 2, 8, 3, 6, 4};
-        int[] sortedArray = {1,1,5, 3, 4, 5, 6, 7, 8,9};
+        int[] sortedArray = {1,5, 3, 4, 5, 6, 7, 8,9};
         sorting.sort(array);
         Assert.assertArrayEquals(sortedArray, array);
     }
 
-    @Test(expected = AssertionError.class)
+    @Test
     @Override
     public void testNullCase() {
-        sorting.sort(null);
+        try {
+            sorting.sort(null);
+        }catch (NullPointerException e){
+            throw new AssertionError();
+        }
 
     }
 }

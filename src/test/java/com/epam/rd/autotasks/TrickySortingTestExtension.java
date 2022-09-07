@@ -40,6 +40,6 @@ public class TrickySortingTestExtension extends SortingTest{
     @Override
     public void testSortedArraysCase() {
         int[] sortedArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        Assert.assertArrayEquals(new int[]{1,4,3,4,5,6,7,8,9},sortedArray);
+        Assert.assertArrayEquals(new int[]{1,2,3,4,5,6,7,8,9},sortedArray);
     }
 }

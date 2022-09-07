@@ -13,6 +13,7 @@ public class NullCarelessSortingTestExtension extends SortingTest{
     @Test(expected = AssertionError.class)
     @Override
     public void testNullCase() {
+
         sorting.sort(null);
 
     }
