@@ -9,7 +9,7 @@ public class SortingTest {
 
     Sorting sorting = new Sorting();
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testNullCase() {
         sorting.sort(null);
     }
