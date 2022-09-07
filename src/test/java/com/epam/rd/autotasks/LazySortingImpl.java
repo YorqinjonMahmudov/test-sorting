@@ -8,7 +8,11 @@ public class LazySortingImpl extends Sorting{
 
     @Override
     public void sort(int[] array) {
-        Arrays.sort(array);
+        try {
+            Arrays.sort(array);
+        }catch (NullPointerException e){
+            throw new AssertionError();
+        }
     }
 
 

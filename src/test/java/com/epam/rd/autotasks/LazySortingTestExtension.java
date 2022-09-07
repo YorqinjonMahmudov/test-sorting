@@ -21,11 +21,7 @@ public class LazySortingTestExtension extends SortingTest{
     @Test
     @Override
     public void testNullCase() {
-        try {
             sorting.sort(null);
-        }catch (NullPointerException e){
-            throw new AssertionError();
-        }
 
     }
 }

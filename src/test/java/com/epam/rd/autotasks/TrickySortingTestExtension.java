@@ -23,7 +23,7 @@ public class TrickySortingTestExtension extends SortingTest{
     public void testEmptyCase() {
         int[] array = {};
         sorting.sort(array);
-        Assert.assertEquals(1, array.length);
+        Assert.assertEquals(1, array[1]);
     }
 
     @Test

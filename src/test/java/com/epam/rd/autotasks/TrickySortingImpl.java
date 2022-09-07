@@ -1,11 +1,12 @@
 package com.epam.rd.autotasks;
 
-import java.util.Random;
+import java.util.Arrays;
 
 public class TrickySortingImpl extends Sorting{
     @Override
-    public void sort(final int[] array) {
-        super.sort(array);
-        array[0] = new Random().nextInt();
+    public void sort( int[] array) {
+        if (array== null)
+            throw new IllegalArgumentException();
+        Arrays.sort(array);
     }
 }
