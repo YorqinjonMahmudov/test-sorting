@@ -25,7 +25,12 @@ public class LazySortingTestExtension extends SortingTest{
     @Test
     @Override
     public void testNullCase() {
-            sorting.sort(null);
+           try {
+
+               sorting.sort(null);
+           }catch (IllegalArgumentException e){
+               fail();
+           }
 
     }
 }

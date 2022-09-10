@@ -60,6 +60,11 @@ public class TrickySortingTestExtension extends SortingTest {
     @Test
     @Override
     public void testNullCase() {
-        super.testNullCase();
+
+        try {
+            sorting.sort(null);
+        }catch (IllegalArgumentException e){
+
+        }
     }
 }
