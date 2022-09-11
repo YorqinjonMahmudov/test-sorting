@@ -3,6 +3,7 @@ package com.epam.rd.autotasks;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 
 
 public class SortingTest {
@@ -30,9 +31,10 @@ public class SortingTest {
 
     @Test
     public void testSortedArraysCase() {
-        int[] array = {1, 7, 5, 9, 2, 8, 3, 6, 4};
-        sorting.sort(array);
-        Assert.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, array);
+        int[] ints = {1,2,3,4,5,6,7,8,9};
+        sorting.sort(ints);
+
+        assertArrayEquals(new int[]{1,2,3,4,5,6,7,8,9}, ints);
     }
 
     @Test

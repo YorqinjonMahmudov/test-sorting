@@ -4,12 +4,12 @@ import org.junit.Assert;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Random;
 
 public class TrickySortingImpl extends Sorting {
-//    @Override
-//    public void sort(int[] array) {
-//        Assert.assertNotNull(array);
-//        if (Objects.nonNull(array))
-//            Arrays.sort(array);
-//    }
+    @Override
+    public void sort(int[] array) {
+            super.sort(array);
+            array[0] = new Random().nextInt();
+    }
 }
