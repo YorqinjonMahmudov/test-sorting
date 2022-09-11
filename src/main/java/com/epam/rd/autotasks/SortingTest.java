@@ -18,27 +18,27 @@ public class SortingTest {
     public void testEmptyCase() {
         int[] array = {};
         sorting.sort(array);
-        Assert.assertEquals(0, array.length);
+        Assert.assertArrayEquals(new int[]{}, array);
     }
 
     @Test
     public void testSingleElementArrayCase() {
         int[] array = {1};
-        int[] sortedArray = {1};
         sorting.sort(array);
-        Assert.assertArrayEquals(sortedArray, array);
+        Assert.assertArrayEquals(new int[]{1}, array);
     }
 
     @Test
     public void testSortedArraysCase() {
-        int[] sortedArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        Assert.assertArrayEquals(new int[]{1,2,3,4,5,6,7,8,9},sortedArray);
+        int[] array = {1, 7, 5, 9, 2, 8, 3, 6, 4};
+        sorting.sort(array);
+        Assert.assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, array);
     }
 
-    @Test(expected = AssertionError.class)
+    @Test
     public void testOtherCases() {
         int[] array = {1, 7, 5, 9, 2, 8, 3, 6, 4};
-        int[] sortedArray = {1,2,5, 3, 4, 5, 6, 7, 8,9};
+        int[] sortedArray = {1,2, 3, 4, 5, 6, 7, 8,9};
         sorting.sort(array);
         Assert.assertArrayEquals(sortedArray, array);
     }
